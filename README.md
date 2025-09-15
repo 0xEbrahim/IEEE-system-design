@@ -93,6 +93,9 @@
         - Body: Movie id
     - Delete /api/v1/reviews/{id} - Private - authorized only to current user
     - GET /api/v1/reviews/?q={text} - public - search for a review
+
+  - Sockets
+    `CreateMovie` event takes movie data push notification and emit `movieCreatedEvent`
     
     
 
