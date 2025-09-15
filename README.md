@@ -104,7 +104,7 @@
 - Due to the intensice data base operations and high size we needed to separate it out of the system, and the client comminicated with the system using rest api, and getting response back.
 - Design has many bottlenecks like only one server for this all loiad, and one database for all this storage and reads storage and no latency optimizations
   <img width="1118" height="422" alt="image" src="https://github.com/user-attachments/assets/7a453988-a61a-4dd2-aaa1-dcc7d2e1c8d3" />
-- Fincding out some services has a load and traffic more more tan other services, o make it easier to be scaled, i used microservices as an archtecture, added Api gateway to handle security related and distribute traffic, sharded the database to handle many reads operations and not put the l;oad only on one node, added replaicas to handle sengle point of failure and multi reads operations as we can read for the replaicas and write to the shard and then async info between them
+- Fincding out some services has a load and traffic more more tan other services, o make it easier to be scaled, i used microservices as an archtecture, added Api gateway to handle security related and distribute traffic with auto scaling enabled to handle the number of api gateways due to the traffic on the website, sharded the database to handle many reads operations and not put the l;oad only on one node, added replaicas to handle sengle point of failure and multi reads operations as we can read for the replaicas and write to the shard and then async info between them
 <img width="1159" height="422" alt="image" src="https://github.com/user-attachments/assets/4bc29fe8-7651-4cc9-aa98-f2a8f61f932a" />
 - Added CDN to handle and cache the static files html/css/js and get it from the nearset or the fastest server for the user, reduce response latency
     <img width="991" height="563" alt="image" src="https://github.com/user-attachments/assets/6c7fa1c4-5561-4caa-ac85-4eca19ba02cd" />
@@ -114,4 +114,6 @@
 - Added elastic search cluster to make the search faster, and reduce loading of the database supports many types of searching, indexing movies and reviews
 <img width="1228" height="860" alt="image" src="https://github.com/user-attachments/assets/c386f0e3-c32a-45e9-be0a-f9ac06761af7" />
 - also added an AI model which takes the user's data from the databsae and train on it then return the data recommended based on the user required.
-- 
+<img width="1362" height="812" alt="image" src="https://github.com/user-attachments/assets/e6a52731-3e94-4f8f-b097-230cc5c2d53c" />
+- added centeralized logging and monitoring to enhance and achieve observability
+
