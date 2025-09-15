@@ -98,5 +98,10 @@
     `CreateMovie` event takes movie data push notification and emit `movieCreatedEvent`
     
     
+### High level design
+<img width="835" height="304" alt="image" src="https://github.com/user-attachments/assets/c05def8a-422f-43a0-b4a4-4c6486e83e2b" />\
+- Due to the intensice data base operations and high size we needed to separate it out of the system, and the client comminicated with the system using rest api, and getting response back.
+  
+
 
     
