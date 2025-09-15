@@ -73,12 +73,27 @@
 - we can see read >>> Writes
 
   ### API design
-  - POST /api/v1/movies
-  body:
-    name
-    trailer
-    members, ...
- -  PATCH /api/v1/movies/{id}
+  - Movie
+    - POST /api/v1/movies -- Create movie[Admin]
+    - body:
+      - name
+      - trailer
+      - members, ...
+    - PATCH /api/v1/movies/{id} -- Update movie[Admin]
+     - name, trailer, ....
+    - DELETE /api/v1/movies/{id} -- Delete a movies[Admin]
+    - GET /api/v1/movies    -- List all movies[Public]
+    - GET /ap/v1/movies/?q={text} - search for a movie
+- Review
+    - POST /api/v1/reviews - Public
+      - body
+          - review, rating
+    - GET /api/v1/reviews/{id} - PUBLIC (Get a review)
+    - GET /api/v1/reviews - Public - Get all reviews on a movie
+        - Body: Movie id
+    - Delete /api/v1/reviews/{id} - Private - authorized only to current user
+    - GET /api/v1/reviews/?q={text} - public - search for a review
+    
     
 
     
