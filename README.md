@@ -116,4 +116,5 @@
 - also added an AI model which takes the user's data from the databsae and train on it then return the data recommended based on the user required.
 <img width="1362" height="812" alt="image" src="https://github.com/user-attachments/assets/e6a52731-3e94-4f8f-b097-230cc5c2d53c" />
 - added centeralized logging and monitoring to enhance and achieve observability
-
+<img width="1383" height="791" alt="image" src="https://github.com/user-attachments/assets/cf6508f0-8066-4f95-bedc-566ba24d5d37" />
+- This is my last design
