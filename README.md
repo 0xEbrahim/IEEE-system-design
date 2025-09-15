@@ -101,7 +101,9 @@
 ### High level design
 <img width="835" height="304" alt="image" src="https://github.com/user-attachments/assets/c05def8a-422f-43a0-b4a4-4c6486e83e2b" />\
 - Due to the intensice data base operations and high size we needed to separate it out of the system, and the client comminicated with the system using rest api, and getting response back.
-  
-
-
+- Design has many bottlenecks like only one server for this all loiad, and one database for all this storage and reads storage and no latency optimizations
+  <img width="1118" height="422" alt="image" src="https://github.com/user-attachments/assets/7a453988-a61a-4dd2-aaa1-dcc7d2e1c8d3" />
+- Fincding out some services has a load and traffic more more tan other services, o make it easier to be scaled, i used microservices as an archtecture, added Api gateway to handle security related and distribute traffic, sharded the database to handle many reads operations and not put the l;oad only on one node, added replaicas to handle sengle point of failure and multi reads operations as we can read for the replaicas and write to the shard and then async info between them
+<img width="1159" height="422" alt="image" src="https://github.com/user-attachments/assets/4bc29fe8-7651-4cc9-aa98-f2a8f61f932a" />
+- Added CDN to handle and cache the static files html/css/js and get it from the nearset or the fastest server for the user, reduce response latency
     
