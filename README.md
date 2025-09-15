@@ -78,6 +78,10 @@
 - we can see read >>> Writes
 
   ### API design
+  - User
+    - POST /api/v1/users/signUp
+    - POST /api/v1/users/login
+    - GET /api/v1/users/me
   - Movie
     - POST /api/v1/movies -- Create movie[Admin]
     - body:
