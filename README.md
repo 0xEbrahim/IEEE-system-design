@@ -112,4 +112,6 @@
 - added message queue to use the pub/sub with event create-moview which will be public a notification to all subscripers
   <img width="1224" height="686" alt="image" src="https://github.com/user-attachments/assets/cd816770-105c-4f24-bda9-cd04e3c00df7" />
 - Added elastic search cluster to make the search faster, and reduce loading of the database supports many types of searching, indexing movies and reviews
-
+<img width="1228" height="860" alt="image" src="https://github.com/user-attachments/assets/c386f0e3-c32a-45e9-be0a-f9ac06761af7" />
+- also added an AI model which takes the user's data from the databsae and train on it then return the data recommended based on the user required.
+- 
