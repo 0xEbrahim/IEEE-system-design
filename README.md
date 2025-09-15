@@ -108,7 +108,7 @@
 <img width="1159" height="422" alt="image" src="https://github.com/user-attachments/assets/4bc29fe8-7651-4cc9-aa98-f2a8f61f932a" />
 - Added CDN to handle and cache the static files html/css/js and get it from the nearset or the fastest server for the user, reduce response latency
     <img width="991" height="563" alt="image" src="https://github.com/user-attachments/assets/6c7fa1c4-5561-4caa-ac85-4eca19ba02cd" />
-- Added redis caching for the consuming services like List all or search services to reduce the load on the database
+- Added redis caching for the consuming services like List all or search services to reduce the load on the database, and the invalidation will be using least recent used
 - added message queue to use the pub/sub with event create-moview which will be public a notification to all subscripers
   <img width="1224" height="686" alt="image" src="https://github.com/user-attachments/assets/cd816770-105c-4f24-bda9-cd04e3c00df7" />
 - Added elastic search cluster to make the search faster, and reduce loading of the database supports many types of searching, indexing movies and reviews
