@@ -95,7 +95,7 @@
     - GET /api/v1/reviews/?q={text} - public - search for a review
 
   - Sockets
-    `CreateMovie` event takes movie data push notification and emit `movieCreatedEvent`
+    `CreateMovie` event takes movie data push notification using pub/sub archeticture
     
     
 ### High level design
@@ -106,4 +106,6 @@
 - Fincding out some services has a load and traffic more more tan other services, o make it easier to be scaled, i used microservices as an archtecture, added Api gateway to handle security related and distribute traffic, sharded the database to handle many reads operations and not put the l;oad only on one node, added replaicas to handle sengle point of failure and multi reads operations as we can read for the replaicas and write to the shard and then async info between them
 <img width="1159" height="422" alt="image" src="https://github.com/user-attachments/assets/4bc29fe8-7651-4cc9-aa98-f2a8f61f932a" />
 - Added CDN to handle and cache the static files html/css/js and get it from the nearset or the fastest server for the user, reduce response latency
-    
+    <img width="991" height="563" alt="image" src="https://github.com/user-attachments/assets/6c7fa1c4-5561-4caa-ac85-4eca19ba02cd" />
+- Added redis caching for the consuming services like List all or search services to reduce the load on the database
+- added message queue to use the pub/sub with event create-moview which will be public a notification to all subscripers
